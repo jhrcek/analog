@@ -31,7 +31,7 @@ analyzeLog delay f = do
     IO.putStrLn . T.unlines . linesWithDelayGreaterThan delay . calculateDelays . filter hasTime $ T.lines logData
 
 hasTime :: Line -> Bool
-hasTime = T.isPrefixOf "["
+hasTime l = T.isPrefixOf "[" l && T.isInfixOf "] " l
 
 linesWithDelayGreaterThan :: Int -> [(NominalDiffTime, Line)] -> [Line]
 linesWithDelayGreaterThan minDelay =
