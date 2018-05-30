@@ -5,16 +5,16 @@ Usage: analog <delay-in-seconds> </path/to/framework.log>
 -}
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
-import Data.Char (isDigit)
-import Data.Function (on)
-import Data.Monoid ((<>))
-import Data.Text (Text)
-import qualified Data.Text as T
-import qualified Data.Text.IO as IO
-import Data.Time (NominalDiffTime, UTCTime)
-import Data.Time.Clock (diffUTCTime)
-import Data.Time.Format (defaultTimeLocale, parseTimeOrError)
-import System.Environment (getArgs)
+import           Data.Char          (isDigit)
+import           Data.Function      (on)
+import           Data.Monoid        ((<>))
+import           Data.Text          (Text)
+import qualified Data.Text          as T
+import qualified Data.Text.IO       as IO
+import           Data.Time          (NominalDiffTime, UTCTime)
+import           Data.Time.Clock    (diffUTCTime)
+import           Data.Time.Format   (defaultTimeLocale, parseTimeOrError)
+import           System.Environment (getArgs)
 
 type Line = Text
 
